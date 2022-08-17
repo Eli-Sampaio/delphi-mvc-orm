@@ -3,6 +3,7 @@ unit projetosimpleorm.model.impl.configuracao;
 interface
 
 uses
+  system.SysUtils,
   LocalCache4D,
   projetosimpleorm.model.interfaces;
 
@@ -37,7 +38,11 @@ implementation
 
 constructor TConfiguracao.Create;
 begin
+  if not FileExists('simpleorm.lc4') then
+    LocalCache.SaveToStorage('simpleorm.lc4');
 
+  LocalCache.LoadDatabase('simpleorm.lc4');
+  LocalCache.Instance('COnfiguracao');
 end;
 
 function TConfiguracao.DataBase(Value: String): IConfiguracao;
@@ -53,7 +58,7 @@ end;
 
 destructor TConfiguracao.destroy;
 begin
-
+  LocalCache.SaveToStorage('simpleorm.lc4');
   inherited;
 end;
 
