@@ -86,7 +86,7 @@ end;
 
 class function TConfiguracao.new: iConfiguracao;
 begin
-
+  Result := Self.Create;
 end;
 
 function TConfiguracao.Password: String;
