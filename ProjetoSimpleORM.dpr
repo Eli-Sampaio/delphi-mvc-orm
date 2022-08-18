@@ -13,7 +13,8 @@ uses
   projetosimpleorm.view.utils.impl.gerenciadorforms in 'src\view\utils\impl\projetosimpleorm.view.utils.impl.gerenciadorforms.pas',
   projetosimpleorm.view.utils.impl.resourceimage in 'src\view\utils\impl\projetosimpleorm.view.utils.impl.resourceimage.pas',
   projetosimpleorm.model.interfaces in 'src\model\projetosimpleorm.model.interfaces.pas',
-  projetosimpleorm.model.impl.configuracao in 'src\model\Impl\projetosimpleorm.model.impl.configuracao.pas';
+  projetosimpleorm.model.impl.configuracao in 'src\model\Impl\projetosimpleorm.model.impl.configuracao.pas',
+  projetosimpleorm.model.impl.conexaofiredac in 'src\model\Impl\projetosimpleorm.model.impl.conexaofiredac.pas';
 
 {$R *.res}
 
